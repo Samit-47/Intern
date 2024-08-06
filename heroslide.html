@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hero slide</title>
+	<style>
+		 #image{
+			position: relative;
+			display: flex;
+			width: 50%;
+			height: 100px;
+		}
+		 #image .slide{
+			position: absolute;
+			top: 0px;
+			width: 50%;
+			height: 100px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+		<div id="image">
+			<img class="slide" src="images/image1.jpg">
+			<img class="slide" src="images/image2.jpg">
+			<img class="slide" src="images/image3.jpg">
+			<img class="slide" src="images/image4.jpg">
+		</div>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-slideshow.js"></script>
+
+	<script>
+		
+			$(document).ready(function() {
+			    
+			    var slides = $('.slide');
+			    var slideIndex = 0;
+			    
+			    // Show the first slide
+			    $(slides[slideIndex]).show();
+			        // Set interval to change slides
+					    setInterval(function() {
+					      $(slides[slideIndex]).fadeOut();
+					      
+					      // Increment index or reset to 0
+					     slideIndex = (slideIndex + 1) % slides.length;
+					      
+					      // Show the next slide
+					      $(slides[slideIndex]).fadeIn();
+					 }, 3000); 
+			 });
+
+
+			/*$('#image').slideShowAd({
+			interval:'3000',
+			slideShowType :'fade', 
+			duration: 4000
+		});*/
+				
+	</script>
+</body>
+</html>
