@@ -1,4 +1,19 @@
-		
+function hide(){
+	dots = document.getElementById('dots');
+	tohide = document.getElementById('tohide');
+	btn1 = document.getElementById('btn1');
+
+	if(tohide.style.display ==="none")
+	{
+		dots.style.display = "none";
+		btn1.innerHTML = "Read less";
+		tohide.style.display = "inline";
+	}else{
+		dots.style.display = "inline";
+		btn1.innerHTML = "Read More";
+		tohide.style.display = "none";
+	}
+}
 			$(document).ready(function() {
 			    
 			    var slides = $('.slide');
@@ -17,3 +32,5 @@
 					      $(slides[slideIndex]).fadeIn();
 					 }, 3000); 
 			 });
+
+	

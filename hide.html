@@ -1,0 +1,32 @@
+
+<div id="topic">
+                  <h1>About Us</h1>
+                 <p class="intro">
+                 Travelia national Travel & Tours is dedicated to making travel simple. We want to help you have amazing trips, ones that are different and special. Our goal is to plan trips that are exciting and peaceful, where you can experience new cultures and connect with people. We're here to make your dream trips happen.
+                                    <span id="dots">...</span>
+                <span id="more"> Travelia is operated by a team of qualified professionals, who are well versed with the complexities of the Travel & Tourism trade. We have been providing different traveling benefits with packages to our  customers since 2014. Travelia is a Travel Agency  located in Bagbazar Kathmandu. We have knowledge and experience with Tour Operations, Trekking, Air Ticketing & Tourism in Nepal.
+                 <br>We give our best to bring fast, easy and reliable traveling service to our valued clients. <br>Kindly feel free to contact us for any further queries or should you have any confusion.
+                </span>
+                  </p>
+                  <button id="btn" onclick="myFunction()">Read More</button>
+              </div>
+<script type="text/javascript">
+   function myFunction()
+    {
+     var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+     var btnText = document.getElementById("btn");
+
+  if (moreText.style.display === "none")
+   {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else 
+  {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+</script>
